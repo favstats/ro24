@@ -57,8 +57,6 @@ jobs:
           install.packages('gtExtras')
           install.packages('httr2')
         shell: Rscript {0}
-      - name: "Script - Run"
-        run: Rscript 'retrieve_targeting_data.R'
       - name: "Script - Update Dashboard"
         run: Rscript 'start.R'
       - name: "Commit"
