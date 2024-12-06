@@ -37,8 +37,15 @@ color_dat <- color_dat %>%
   mutate(colors = case_when(
     colors == "orange" ~ "#f77604",
     colors == "green" ~ "#7aba2d",
+    colors == "darkgray" ~ "#A9A9A9",
+    colors == "darkblue" ~ "#000080",
+    colors == "lightblue" ~ "#ADD8E6",
+    colors == "#ccc" ~ "#cccccc",
+    is.na(colors) ~ "#00BFFF",
     T ~ colors
   ))
+
+
 
 ```
 
@@ -79,7 +86,7 @@ region_dat <- election_dat30 %>%
             num_ads = sum(num_ads)) %>%
   ungroup() %>%
   rename(region = value) %>%
-  mutate(region = str_remove_all(region, ", Iceland"))
+  mutate(region = str_remove_all(region, ", Romania"))
 
 the_colors <- region_dat %>%
   group_by(party) %>%
@@ -179,7 +186,7 @@ region_dat <- election_dat30 %>%
             num_ads = sum(num_ads)) %>%
   ungroup() %>%
   rename(region = value) %>%
-  mutate(region = str_remove_all(region, ", Iceland"))
+  mutate(region = str_remove_all(region, ", Romania"))
 
 the_colors <- region_dat %>%
   group_by(party) %>%
@@ -262,7 +269,7 @@ region_dat <- election_dat30 %>%
             num_ads = sum(num_ads)) %>%
   ungroup() %>%
   rename(region = value) %>%
-  mutate(region = str_remove_all(region, ", Iceland"))
+  mutate(region = str_remove_all(region, ", Romania"))
 
 the_colors <- region_dat %>%
   group_by(party) %>%
@@ -323,7 +330,7 @@ region_dat <- election_dat30 %>%
             num_ads = sum(num_ads)) %>%
   ungroup() %>%
   rename(region = value) %>%
-  mutate(region = str_remove_all(region, ", Iceland"))
+  mutate(region = str_remove_all(region, ", Romania"))
 
 the_colors <- region_dat %>%
   group_by(party) %>%

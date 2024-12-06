@@ -234,8 +234,17 @@ wtm_data <-
 
 # uswtm %>% count(entities.short_name, platforms.name, sort = T) %>% View()
 
-all_dat <- wtm_data %>%
-  # bind_rows(more_data) %>%
+rommeta <- readr::read_csv("data/Romania 2024 - meta.csv") %>% 
+  select(page_id, party) %>% 
+  drop_na() %>% 
+  distinct(page_id, .keep_all = T)  %>%
+  mutate_all(as.character) %>% 
+  filter(party != "-")
+
+# rommeta %>% count(party) %>% View()
+
+all_dat <- rommeta %>%
+  bind_rows(wtm_data) %>%
   distinct(page_id, .keep_all = T) %>%
   add_count(page_name, sort  = T) %>%
   mutate(remove_em = n >= 2 & str_ends(page_id, "0")) %>%
@@ -254,6 +263,8 @@ all_dat <- wtm_data %>%
 
 # all_dat %>% count(party, sort = T)
 # all_dat %>% nrow
+
+saveRDS(all_dat, "data/all_data.rds")
 
 write_lines(all_dat %>% count(page_id, sort = T) %>% nrow, "n_advertisers.txt")
 

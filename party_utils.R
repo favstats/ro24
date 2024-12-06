@@ -13,7 +13,6 @@
 # 
 # source(here::here("cntry.R"))
 # 
-# # all_dat <- readRDS(here::here("data/all_dat.rds"))
 # 
 # # print("hello")
 # 
@@ -383,9 +382,14 @@ sets <- jsonlite::fromJSON("settings.json")
 # #   
 # # }
 
+all_dat <- readRDS("../data/all_data.rds")
+
+
 election_dat30 <- readRDS("../data/election_dat30.rds")  %>% 
   as_tibble() %>% 
   filter(is.na(no_data)) %>% 
+  select(-party) %>% 
+  left_join(all_dat %>% select(page_id, party)) %>% 
   drop_na(party) %>% 
   mutate(internal_id = page_id) %>% 
   filter(!(party %in% c("And", "Reg", "Oth", "Gov"))) %>% 
@@ -393,6 +397,8 @@ election_dat30 <- readRDS("../data/election_dat30.rds")  %>%
 election_dat7 <- readRDS("../data/election_dat7.rds")  %>% 
   as_tibble() %>% 
   filter(is.na(no_data))  %>% 
+  select(-party) %>% 
+  left_join(all_dat %>% select(page_id, party)) %>% 
   drop_na(party) %>% 
   mutate(internal_id = page_id) %>% 
   filter(!(party %in% c("And", "Reg", "Oth", "Gov"))) %>% 

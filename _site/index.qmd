@@ -46,6 +46,19 @@ total_spend_id <- election_dat30 %>%
   summarize(total_spend_formatted = sum(total_spend_formatted)) %>%
   ungroup()
 
+color_dat <- color_dat %>% 
+  mutate(colors = case_when(
+    colors == "orange" ~ "#f77604",
+    colors == "green" ~ "#7aba2d",
+    colors == "darkgray" ~ "#A9A9A9",
+    colors == "darkblue" ~ "#000080",
+    colors == "lightblue" ~ "#ADD8E6",
+    colors == "#ccc" ~ "#cccccc",
+    is.na(colors) ~ "#00BFFF",
+    T ~ colors
+  ))
+
+
 # election_dat30 %>% glimpse()
 # color_dat
 
@@ -121,6 +134,11 @@ add_ribbons3 <- function(x, adv, col) {
 
 Here you can see the expenditures of political parties in the lead-up to the elections according to the latest data.
 
+
+
+::: {.panel-tabset}
+
+## Facebook
 
 ::: {.panel-tabset}
 
@@ -295,6 +313,20 @@ eval(parse(text = paste0("gt(the_table7, rowname_col = 'party_col') %>% fmt_mark
 
 :::
 
+::: {.panel-tabset}
+
+## Google
+
+::: {.panel-tabset}
+
+### `r last30days_string`
 
 
 
+### `r last7days_string`
+
+
+:::
+
+
+:::
