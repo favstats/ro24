@@ -393,7 +393,8 @@ election_dat30 <- readRDS("../data/election_dat30.rds")  %>%
   drop_na(party) %>% 
   mutate(internal_id = page_id) %>% 
   filter(!(party %in% c("And", "Reg", "Oth", "Gov"))) %>% 
-  mutate(party = entities.name)
+  mutate(party = entities.name) %>% 
+  drop_na(party)
 election_dat7 <- readRDS("../data/election_dat7.rds")  %>% 
   as_tibble() %>% 
   filter(is.na(no_data))  %>% 
@@ -402,7 +403,8 @@ election_dat7 <- readRDS("../data/election_dat7.rds")  %>%
   drop_na(party) %>% 
   mutate(internal_id = page_id) %>% 
   filter(!(party %in% c("And", "Reg", "Oth", "Gov"))) %>% 
-  mutate(party = entities.name)
+  mutate(party = entities.name) %>% 
+  drop_na(party)
 
 currency_symbol <- "lei"
 
