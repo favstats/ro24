@@ -411,6 +411,9 @@ color_dat <- election_dat30 %>%
   distinct(party, entities.color) %>% 
   rename(colors = entities.color)
 
+color_dat <- distinct(color_dat, party, .keep_all = TRUE) %>% drop_na()
+
+
 fin <- (as.Date(election_dat30$ds[1])-lubridate::days(1))
 begin7 <- fin-lubridate::days(6)
 begin30 <- fin-lubridate::days(29)
