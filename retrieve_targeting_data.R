@@ -239,7 +239,8 @@ rommeta <- readr::read_csv("data/Romania 2024 - meta.csv") %>%
   drop_na() %>% 
   distinct(page_id, .keep_all = T)  %>%
   mutate_all(as.character) %>% 
-  filter(party != "-")
+  filter(party != "-") %>% 
+  left_join(wtm_data %>% mutate(party = entities.short_name) %>% select(party, entities.name))
 
 # rommeta %>% count(party) %>% View()
 

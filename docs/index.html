@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="How do political parties chase your vote, what do they want to keep hidden, and how much money do they spend on it? In the lead-up to the elections, we monitor political microtargeting.">
+<meta name="description" content="Hoe jagen politieke partijen op jouw stem, wat willen ze juist niet dat je ziet en hoeveel geld geven ze daaraan uit? In aanloop naar de Tweede Kamerverkiezingen monitoren we politieke microtargeting.">
 
-<title>Who Targets Me - Romania - Spending</title>
+<title>Who Targets Me - Romania - Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./wtm_logo_2020_transparent-150x150.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -56,20 +58,78 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -87,14 +147,18 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Who Targets Me - Romania</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Zoeken"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Schakel navigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text"><iconify-icon inline="" icon="ph:note" aria-label="Icon note from ph Iconify.design set." title="Icon note from ph Iconify.design set."></iconify-icon> Note</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./spending.html"> 
 <span class="menu-text"><iconify-icon inline="" icon="ph:coins" aria-label="Icon coins from ph Iconify.design set." title="Icon coins from ph Iconify.design set."></iconify-icon> Spending</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -141,9 +205,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Spending</h1>
+<h1 class="title">Blog</h1>
 </div>
 
+<div>
+  <div class="description">
+    Hoe jagen politieke partijen op jouw stem, wat willen ze juist niet dat je ziet en hoeveel geld geven ze daaraan uit? In aanloop naar de Tweede Kamerverkiezingen monitoren we politieke microtargeting.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page">
@@ -158,1171 +227,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here you can see the expenditures of political parties in the lead-up to the elections according to the latest data.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Meta</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Google</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">2 Nov - 1 Dec 2024</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">25 Nov - 1 Dec 2024</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>During this period, political parties spent a total of lei15,082,630 and displayed 16040 advertisements on Meta (Facebook and Instagram).</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="urjpciquro" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#urjpciquro table {
-  font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-#urjpciquro thead, #urjpciquro tbody, #urjpciquro tfoot, #urjpciquro tr, #urjpciquro td, #urjpciquro th {
-  border-style: none;
-}
 
-#urjpciquro p {
-  margin: 0;
-  padding: 0;
-}
 
-#urjpciquro .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: none;
-  border-top-width: 3px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
 
-#urjpciquro .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#urjpciquro .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#urjpciquro .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#urjpciquro .gt_heading {
-  background-color: #FFFFFF;
-  text-align: left;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#urjpciquro .gt_bottom_border {
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#urjpciquro .gt_col_headings {
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #000000;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#urjpciquro .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#urjpciquro .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#urjpciquro .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#urjpciquro .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#urjpciquro .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #000000;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#urjpciquro .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#urjpciquro .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #000000;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#urjpciquro .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #000000;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FFFFFF;
-  vertical-align: middle;
-}
-
-#urjpciquro .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#urjpciquro .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#urjpciquro .gt_row {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#urjpciquro .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 0px;
-  border-right-color: #FFFFFF;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#urjpciquro .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#urjpciquro .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#urjpciquro .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#urjpciquro .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#urjpciquro .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#urjpciquro .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#urjpciquro .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#urjpciquro .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#urjpciquro .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#urjpciquro .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#urjpciquro .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#urjpciquro .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#urjpciquro .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#urjpciquro .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#urjpciquro .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#urjpciquro .gt_sourcenote {
-  font-size: 12px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#urjpciquro .gt_left {
-  text-align: left;
-}
-
-#urjpciquro .gt_center {
-  text-align: center;
-}
-
-#urjpciquro .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#urjpciquro .gt_font_normal {
-  font-weight: normal;
-}
-
-#urjpciquro .gt_font_bold {
-  font-weight: bold;
-}
-
-#urjpciquro .gt_font_italic {
-  font-style: italic;
-}
-
-#urjpciquro .gt_super {
-  font-size: 65%;
-}
-
-#urjpciquro .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#urjpciquro .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#urjpciquro .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#urjpciquro .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#urjpciquro .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#urjpciquro .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#urjpciquro .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#urjpciquro .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#urjpciquro div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-
-tbody tr:last-child {
-  border-bottom: 2px solid #ffffff00;
-}
-</style>
-
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
-<th id="Number of Advertisers" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Number of Advertisers</th>
-<th id="Top Spenders" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Top Spenders</th>
-<th id="Number of Ads" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Number of Ads</th>
-<th id="Total Spend" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Total Spend</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Uniunea Salvați România</p></td>
-<td class="gt_row gt_center" headers="stub_1_1 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #002A59"><p>75</p></td>
-<td class="gt_row gt_left" headers="stub_1_1 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=380605622501418">Elena Lasconi alege Câmpulung Muscel</a> (lei2,441,246)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1058116737612843">Uniunea Salvați România - USR</a> (lei414,998)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1657273667820719">USR București</a> (lei280,838)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_1 Number of Ads"><p>2,876</p></td>
-<td class="gt_row gt_center" headers="stub_1_1 Total Spend"><p>lei4,849,063</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Partidul Social Democrat</p></td>
-<td class="gt_row gt_center" headers="stub_1_2 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #ff0000"><p>159</p></td>
-<td class="gt_row gt_left" headers="stub_1_2 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1395939193764858">Marcel Ciolacu</a> (lei1,136,786)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=291177524360702">Partidul Social Democrat</a> (lei967,547)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=293215748279337">Bistrița-Năsăud fără PSD</a> (lei327,374)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_2 Number of Ads"><p>3,811</p></td>
-<td class="gt_row gt_center" headers="stub_1_2 Total Spend"><p>lei4,154,784</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Partidul Național Liberal</p></td>
-<td class="gt_row gt_center" headers="stub_1_3 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #FFDD00"><p>91</p></td>
-<td class="gt_row gt_left" headers="stub_1_3 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1602563209957356">PNL Bacău</a> (lei257,991)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1577877239102295">Nicolae Ionel Ciucă</a> (lei253,772)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=181375448581167">Partidul Național Liberal</a> (lei246,123)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_3 Number of Ads"><p>2,711</p></td>
-<td class="gt_row gt_center" headers="stub_1_3 Total Spend"><p>lei2,062,450</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Alianța pentru Unirea Românilor</p></td>
-<td class="gt_row gt_center" headers="stub_1_4 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #FCC224"><p>62</p></td>
-<td class="gt_row gt_left" headers="stub_1_4 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=2212856535602171">George Simion</a> (lei651,859)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=103445844473825">Alianța pentru Unirea Românilor - AUR</a> (lei374,399)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=310803225451939">Alegerea de AUR</a> (lei186,261)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_4 Number of Ads"><p>2,000</p></td>
-<td class="gt_row gt_center" headers="stub_1_4 Total Spend"><p>lei1,551,991</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Reînnoim Proiectul European al României</p></td>
-<td class="gt_row gt_center" headers="stub_1_5 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #c40075"><p>38</p></td>
-<td class="gt_row gt_left" headers="stub_1_5 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=111024331618659">Partidul REPER</a> (lei457,786)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=107514905357808">REPER București</a> (lei207,095)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=104842045659467">REPER Cluj</a> (lei114,433)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_5 Number of Ads"><p>1,077</p></td>
-<td class="gt_row gt_center" headers="stub_1_5 Total Spend"><p>lei1,160,373</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Uniunea Democrată Maghiară din România</p></td>
-<td class="gt_row gt_center" headers="stub_1_6 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #15803C"><p>74</p></td>
-<td class="gt_row gt_left" headers="stub_1_6 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=102601499822802">Uniunea Democrată Maghiară din România</a> (lei220,695)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=175293925828191">Kelemen Hunor</a> (lei204,010)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1427831627527824">RMDSZ Bihar Megye</a> (lei66,503)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_6 Number of Ads"><p>2,871</p></td>
-<td class="gt_row gt_center" headers="stub_1_6 Total Spend"><p>lei914,907</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Forța Dreptei</p></td>
-<td class="gt_row gt_center" headers="stub_1_7 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #08510A"><p>18</p></td>
-<td class="gt_row gt_left" headers="stub_1_7 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=110416341471979">Forța Dreptei Vrancea</a> (lei53,213)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=104740995380818">Forța Dreptei Iași</a> (lei18,640)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=105131372029305">Forța Dreptei - Ilfov</a> (lei17,586)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_7 Number of Ads"><p>337</p></td>
-<td class="gt_row gt_center" headers="stub_1_7 Total Spend"><p>lei176,250</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Independent</p></td>
-<td class="gt_row gt_center" headers="stub_1_8 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #A9A9A9"><p>2</p></td>
-<td class="gt_row gt_left" headers="stub_1_8 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=167163410062102">Ana Birchall</a> (lei101,101)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=219362498074565">Cristian Diaconescu</a> (lei3,262)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_8 Number of Ads"><p>109</p></td>
-<td class="gt_row gt_center" headers="stub_1_8 Total Spend"><p>lei104,363</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>PMP</p></td>
-<td class="gt_row gt_center" headers="stub_1_9 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: NA"><p>7</p></td>
-<td class="gt_row gt_left" headers="stub_1_9 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=105718774543302">Constantin Stăvărache</a> (lei21,713)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=494469087244449">Eugen Tomac</a> (lei9,255)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=683394231727617">Dorin Valeriu Badulescu</a> (lei5,787)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_9 Number of Ads"><p>67</p></td>
-<td class="gt_row gt_center" headers="stub_1_9 Total Spend"><p>lei44,884</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_10" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Partidul Național Conservator Român</p></td>
-<td class="gt_row gt_center" headers="stub_1_10 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #1665FE"><p>6</p></td>
-<td class="gt_row gt_left" headers="stub_1_10 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=238892115973047">Eni Groza-consilier local com.Bălan</a> (lei16,161)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=168501533013094">PNCR - Partidul National Conservator Roman</a> (lei3,000)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=183697491486285">PNCR - Organizatia Judeteana Suceava</a> (lei2,712)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_10 Number of Ads"><p>56</p></td>
-<td class="gt_row gt_center" headers="stub_1_10 Total Spend"><p>lei26,267</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_11" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>S.O.S. România</p></td>
-<td class="gt_row gt_center" headers="stub_1_11 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #cccccc"><p>3</p></td>
-<td class="gt_row gt_left" headers="stub_1_11 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=106723995505219">Partidul S.O.S România - Filiala București</a> (lei15,422)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=112209428343583">Partidul S.O.S România - Filiala Bacău</a> (lei5,272)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=279910522635759">Partidul S.O.S România - Prahova</a> (lei869)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_11 Number of Ads"><p>74</p></td>
-<td class="gt_row gt_center" headers="stub_1_11 Total Spend"><p>lei21,563</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_12" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Alternativa Dreaptă</p></td>
-<td class="gt_row gt_center" headers="stub_1_12 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #000080"><p>2</p></td>
-<td class="gt_row gt_left" headers="stub_1_12 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=208257289692389">Catalin Avramescu</a> (lei8,355)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=431999070002141">Alexandru Luca</a> (lei7,380)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_12 Number of Ads"><p>51</p></td>
-<td class="gt_row gt_center" headers="stub_1_12 Total Spend"><p>lei15,735</p></td>
-</tr>
-</tbody>
-</table>
-
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1699830000000" data-listing-file-modified-sort="1733492961696" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="22">
+<div class="thumbnail">
+<p><a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external"></a></p><a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external">
+<p><img src="./posts/christenunie.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external">Doing the Dirty Work: Proxy Pages on Facebook and Instagram</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/christenunie-mikt-op-dominees-en-bijbelstudies.html" class="no-external">
+<div class="listing-date">
+13 nov 2023
+</div>
+<div class="listing-author">
+Authors
+</div>
+</a>
 </div>
 </div>
 </div>
+<div class="listing-no-matching d-none">
+Geen overeenkomsten
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>During this period, political parties spent a total of lei4,747,130 and displayed 6524 advertisements on Meta (Facebook and Instagram).</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="ufhjwmuoyt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#ufhjwmuoyt table {
-  font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#ufhjwmuoyt thead, #ufhjwmuoyt tbody, #ufhjwmuoyt tfoot, #ufhjwmuoyt tr, #ufhjwmuoyt td, #ufhjwmuoyt th {
-  border-style: none;
-}
-
-#ufhjwmuoyt p {
-  margin: 0;
-  padding: 0;
-}
-
-#ufhjwmuoyt .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: none;
-  border-top-width: 3px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#ufhjwmuoyt .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#ufhjwmuoyt .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#ufhjwmuoyt .gt_heading {
-  background-color: #FFFFFF;
-  text-align: left;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_bottom_border {
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_col_headings {
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #000000;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#ufhjwmuoyt .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#ufhjwmuoyt .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#ufhjwmuoyt .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#ufhjwmuoyt .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #000000;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#ufhjwmuoyt .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#ufhjwmuoyt .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #000000;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#ufhjwmuoyt .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #000000;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #FFFFFF;
-  vertical-align: middle;
-}
-
-#ufhjwmuoyt .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#ufhjwmuoyt .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#ufhjwmuoyt .gt_row {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#ufhjwmuoyt .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 0px;
-  border-right-color: #FFFFFF;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ufhjwmuoyt .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#ufhjwmuoyt .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#ufhjwmuoyt .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#ufhjwmuoyt .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ufhjwmuoyt .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#ufhjwmuoyt .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ufhjwmuoyt .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#ufhjwmuoyt .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ufhjwmuoyt .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#ufhjwmuoyt .gt_sourcenote {
-  font-size: 12px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#ufhjwmuoyt .gt_left {
-  text-align: left;
-}
-
-#ufhjwmuoyt .gt_center {
-  text-align: center;
-}
-
-#ufhjwmuoyt .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#ufhjwmuoyt .gt_font_normal {
-  font-weight: normal;
-}
-
-#ufhjwmuoyt .gt_font_bold {
-  font-weight: bold;
-}
-
-#ufhjwmuoyt .gt_font_italic {
-  font-style: italic;
-}
-
-#ufhjwmuoyt .gt_super {
-  font-size: 65%;
-}
-
-#ufhjwmuoyt .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#ufhjwmuoyt .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#ufhjwmuoyt .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#ufhjwmuoyt .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#ufhjwmuoyt .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#ufhjwmuoyt .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#ufhjwmuoyt .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#ufhjwmuoyt .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#ufhjwmuoyt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-
-tbody tr:last-child {
-  border-bottom: 2px solid #ffffff00;
-}
-</style>
-
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
-<th id="Number of Advertisers" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Number of Advertisers</th>
-<th id="Top Spenders" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Top Spenders</th>
-<th id="Number of Ads" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Number of Ads</th>
-<th id="Total Spend" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase" scope="col">Total Spend</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Partidul Social Democrat</p></td>
-<td class="gt_row gt_center" headers="stub_1_1 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #ff0000"><p>125</p></td>
-<td class="gt_row gt_left" headers="stub_1_1 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=291177524360702">Partidul Social Democrat</a> (lei805,841)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1395939193764858">Marcel Ciolacu</a> (lei70,281)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=543681502428738">PSD Dolj</a> (lei69,455)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_1 Number of Ads"><p>1,753</p></td>
-<td class="gt_row gt_center" headers="stub_1_1 Total Spend"><p>lei1,452,731</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Uniunea Salvați România</p></td>
-<td class="gt_row gt_center" headers="stub_1_2 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #002A59"><p>61</p></td>
-<td class="gt_row gt_left" headers="stub_1_2 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1657273667820719">USR București</a> (lei128,679)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1058116737612843">Uniunea Salvați România - USR</a> (lei124,325)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=380605622501418">Elena Lasconi alege Câmpulung Muscel</a> (lei101,238)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_2 Number of Ads"><p>1,100</p></td>
-<td class="gt_row gt_center" headers="stub_1_2 Total Spend"><p>lei1,129,447</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Partidul Național Liberal</p></td>
-<td class="gt_row gt_center" headers="stub_1_3 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #FFDD00"><p>81</p></td>
-<td class="gt_row gt_left" headers="stub_1_3 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=181375448581167">Partidul Național Liberal</a> (lei171,661)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=1602563209957356">PNL Bacău</a> (lei107,599)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=185088338177066">PNL IASI</a> (lei33,451)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_3 Number of Ads"><p>1,158</p></td>
-<td class="gt_row gt_center" headers="stub_1_3 Total Spend"><p>lei699,309</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Reînnoim Proiectul European al României</p></td>
-<td class="gt_row gt_center" headers="stub_1_4 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #c40075"><p>38</p></td>
-<td class="gt_row gt_left" headers="stub_1_4 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=111024331618659">Partidul REPER</a> (lei212,013)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=107514905357808">REPER București</a> (lei129,397)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=104842045659467">REPER Cluj</a> (lei71,245)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_4 Number of Ads"><p>720</p></td>
-<td class="gt_row gt_center" headers="stub_1_4 Total Spend"><p>lei619,771</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Uniunea Democrată Maghiară din România</p></td>
-<td class="gt_row gt_center" headers="stub_1_5 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #15803C"><p>67</p></td>
-<td class="gt_row gt_left" headers="stub_1_5 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=102601499822802">Uniunea Democrată Maghiară din România</a> (lei102,794)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=175293925828191">Kelemen Hunor</a> (lei59,064)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=232486986822622">Cseke Attila</a> (lei38,383)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_5 Number of Ads"><p>1,099</p></td>
-<td class="gt_row gt_center" headers="stub_1_5 Total Spend"><p>lei409,771</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Alianța pentru Unirea Românilor</p></td>
-<td class="gt_row gt_center" headers="stub_1_6 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #FCC224"><p>33</p></td>
-<td class="gt_row gt_left" headers="stub_1_6 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=2212856535602171">George Simion</a> (lei114,156)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=103445844473825">Alianța pentru Unirea Românilor - AUR</a> (lei112,613)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=192356900634086">Oameni de AUR</a> (lei22,511)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_6 Number of Ads"><p>372</p></td>
-<td class="gt_row gt_center" headers="stub_1_6 Total Spend"><p>lei291,137</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Forța Dreptei</p></td>
-<td class="gt_row gt_center" headers="stub_1_7 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #08510A"><p>18</p></td>
-<td class="gt_row gt_left" headers="stub_1_7 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=110416341471979">Forța Dreptei Vrancea</a> (lei14,733)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=101670255900739">Forța Dreptei - Cluj</a> (lei11,929)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=104740995380818">Forța Dreptei Iași</a> (lei7,902)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_7 Number of Ads"><p>197</p></td>
-<td class="gt_row gt_center" headers="stub_1_7 Total Spend"><p>lei82,333</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>PMP</p></td>
-<td class="gt_row gt_center" headers="stub_1_8 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: NA"><p>6</p></td>
-<td class="gt_row gt_left" headers="stub_1_8 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=105718774543302">Constantin Stăvărache</a> (lei16,495)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=494469087244449">Eugen Tomac</a> (lei3,163)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=683394231727617">Dorin Valeriu Badulescu</a> (lei2,652)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_8 Number of Ads"><p>29</p></td>
-<td class="gt_row gt_center" headers="stub_1_8 Total Spend"><p>lei26,100</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Partidul Național Conservator Român</p></td>
-<td class="gt_row gt_center" headers="stub_1_9 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #1665FE"><p>5</p></td>
-<td class="gt_row gt_left" headers="stub_1_9 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=238892115973047">Eni Groza-consilier local com.Bălan</a> (lei10,932)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=175492488977076">PNCR - Organizatia Judeteana Botosani</a> (lei1,069)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=118436177951216">Danut Andrus</a> (lei989)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_9 Number of Ads"><p>27</p></td>
-<td class="gt_row gt_center" headers="stub_1_9 Total Spend"><p>lei14,659</p></td>
-</tr>
-<tr class="even">
-<td id="stub_1_10" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>S.O.S. România</p></td>
-<td class="gt_row gt_center" headers="stub_1_10 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #cccccc"><p>3</p></td>
-<td class="gt_row gt_left" headers="stub_1_10 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=106723995505219">Partidul S.O.S România - Filiala București</a> (lei11,992)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=112209428343583">Partidul S.O.S România - Filiala Bacău</a> (lei1,310)<br>3. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=279910522635759">Partidul S.O.S România - Prahova</a> (lei431)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_10 Number of Ads"><p>48</p></td>
-<td class="gt_row gt_center" headers="stub_1_10 Total Spend"><p>lei13,733</p></td>
-</tr>
-<tr class="odd">
-<td id="stub_1_11" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row"><p>Alternativa Dreaptă</p></td>
-<td class="gt_row gt_center" headers="stub_1_11 Number of Advertisers" style="border-left-width: 18.5px; border-left-style: solid; border-left-color: #000080"><p>2</p></td>
-<td class="gt_row gt_left" headers="stub_1_11 Top Spenders" style="vertical-align: center"><p><br>1. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=431999070002141">Alexandru Luca</a> (lei4,666)<br>2. <a href="https://www.facebook.com/ads/library/?ad_type=political_and_issue_ads&amp;country=US&amp;view_all_page_id=208257289692389">Catalin Avramescu</a> (lei3,473)<br><br></p></td>
-<td class="gt_row gt_center" headers="stub_1_11 Number of Ads"><p>21</p></td>
-<td class="gt_row gt_center" headers="stub_1_11 Total Spend"><p>lei8,139</p></td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">2 Nov - 1 Dec 2024</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">25 Nov - 1 Dec 2024</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1377,12 +320,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Gekopieerd!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Gekopieerd!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

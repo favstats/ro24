@@ -493,3 +493,156 @@ map_chr_progress <- function(.x, .f, ...) {
 }
 
 
+ggl_get_spending <- function(advertiser_id,
+                             start_date = 20231029, end_date = 20231128,
+                             cntry = "NL",
+                             get_times = F) {
+  
+  if(lubridate::is.Date(start_date)|is.character(start_date)){
+    start_date <- lubridate::ymd(start_date) %>% stringr::str_remove_all("-") %>% as.numeric()
+  }
+  if(lubridate::is.Date(end_date)|is.character(end_date)){
+    end_date <- lubridate::ymd(end_date) %>% stringr::str_remove_all("-") %>% as.numeric() %>% magrittr::add(1)
+  } else if(is.numeric(end_date)){
+    end_date <- end_date + 1
+  }
+  
+  # statsType <- 2
+  # advertiser_id = "AR10605432864201768961"
+  cntry_dict <- c(NL = "2528", DE = "2276",
+                  BE = "2056", AR = "2032",
+                  AU = "2036", BR = "2076",
+                  CL = "2152", AT = "2040",
+                  BG = "2100", HR = "2191",
+                  CY = "2196", CZ = "2203",
+                  DK = "2208", EE = "2233",
+                  FI = "2246", FR = "2250",
+                  GR = "2300", HU = "2348",
+                  IE = "2372", IT = "2380",
+                  LV = "2428", LT = "2440",
+                  LU = "2442", MT = "2470",
+                  PL = "2616", PT = "2620",
+                  RO = "2642", SK = "2703",
+                  SI = "2705", ES = "2724",
+                  SE = "2752", IN = "2356",
+                  IL = "2376", ZA = "2710",
+                  TW = "2158", UK = "2826",
+                  US = "2826")
+  
+  cntry <- cntry_dict[[cntry]]
+  
+  # Define the URL
+  url <- "https://adstransparency.google.com/anji/_/rpc/StatsService/GetStats?authuser="
+  
+  # Define headers
+  headers <- c(
+    `accept` = "*/*",
+    `accept-language` = "en-US,en;q=0.9",
+    `content-type` = "application/x-www-form-urlencoded",
+    `sec-ch-ua` = "\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+    `sec-ch-ua-mobile` = "?0",
+    `sec-ch-ua-platform` = "\"Windows\"",
+    `sec-fetch-dest` = "empty",
+    `sec-fetch-mode` = "cors",
+    `sec-fetch-site` = "same-origin",
+    `x-framework-xsrf-token` = "",
+    `x-same-domain` = "1")
+  
+  
+  # Construct the body
+  body <- paste0('f.req={"1":{"1":"', advertiser_id,
+                 '","6":', start_date,
+                 ',"7":', end_date,
+                 ',"8":', jsonlite::toJSON(cntry),
+                 '},"3":{"1":2}}')
+  
+  # Make the POST request
+  response <- httr::POST(url, httr::add_headers(.headers = headers), body = body, encode = "form")
+  
+  # Extract the content
+  res <- httr::content(response, "parsed")
+  
+  ress <- res$`1`
+  
+  if(length(ress)==0){
+    return(tibble::tibble(spend = 0, number_of_ads = 0))
+  }
+  
+  dat1 <-ress$`1` %>% 
+    purrr::flatten() %>% 
+    map(~purrr::set_names(unlist(.x), c("currency", "spend"))) %>% 
+    # Convert to a named vector with spend_[currency] as names
+    map(~ tibble(!!paste0("spend_", .x["currency"]) := as.numeric(.x["spend"]))) %>% 
+    # Combine all tibbles into a single row
+    purrr::reduce(dplyr::bind_cols)
+  
+  dat2 <- ress$`2` %>% tibble::as_tibble() %>% purrr::set_names("number_of_ads")
+  
+  
+  
+  
+  # dat3 <- ress$`3` %>%
+  #   purrr::map(tibble::as_tibble) %>%
+  #   purrr::map_dfc(~{
+  #     if (.x[3] == "3") {
+  #       purrr::set_names(.x, c("text_ad_perc", "text_ad_spend", "text_type"))
+  #     }  else  if (.x[3] == "2") {
+  #       purrr::set_names(.x, c("img_ad_perc", "img_ad_spend", "img_type"))
+  #     } else   if (.x[3] == "1") {
+  #       purrr::set_names(.x, c("vid_ad_perc", "vid_ad_spend", "vid_type"))
+  #     }
+  #   })
+  # 
+  dat4 <-ress$`5`  %>%
+    purrr::flatten() %>%
+    purrr::flatten() %>%
+    purrr::set_names(c("metric", "advertiser_id", "advertiser_name", "cntry"))
+  
+  # dat5 <-ress$`6`  %>%
+  #   purrr::flatten() %>%
+  #   purrr::flatten() %>%
+  #   purrr::set_names(c("unk1", "unk2", "unk3"))
+  
+  
+  
+  # dat6 <-ress$`8`   %>%
+  #   purrr::flatten() %>%
+  #   purrr::flatten() %>%
+  #   purrr::set_names(c("unk4", "unk5"))
+  
+  fin <- dat1 %>%
+    tibble::as_tibble() %>%
+    dplyr::bind_cols(dat2) %>%
+    # dplyr::bind_cols(dat3) %>%
+    dplyr::bind_cols(dat4)# %>%
+  # dplyr::bind_cols(dat5) %>%
+  # dplyr::bind_cols(dat6)
+  
+  if(get_times){
+    
+    # Transform dat1 to long format
+    dat1_long <- dat1 %>%
+      tidyr::pivot_longer(
+        cols = starts_with("spend_"),  # Select columns starting with "spend_"
+        names_prefix = "spend_",       # Remove the "spend_" prefix
+        names_to = "currency",         # Store currency names (e.g., "EUR", "RON")
+        values_to = "total_spend"      # Store corresponding spend values
+      )
+    
+    # Combine with ress$'7' data
+    timedat <- ress$`7` %>%
+      purrr::map_dfr(tibble::as_tibble) %>%
+      purrr::set_names(c("perc_spend", "date")) %>%
+      dplyr::mutate(date = lubridate::ymd(date)) %>%
+      dplyr::cross_join(dat1_long) %>%  # Combine with all currencies
+      dplyr::mutate(spend = perc_spend * total_spend)
+    
+    
+    return(timedat)
+  } else {
+    return(fin)
+  }
+  
+}
+
+
