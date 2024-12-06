@@ -161,9 +161,9 @@ contested_dat7 <- interest_targeting7 %>%
 
 ```{r, fig.width=16, fig.height=12, dpi=300}
 
-generate_plots <- function(data, exclusion = F) {
-
-  if(exclusion){
+generate_plots <- function(data, exclusion = FALSE) {
+  
+  if (exclusion) {
     wooord <- "on ads excluding"
     wooord2 <- "excluding"
   } else {
@@ -171,12 +171,27 @@ generate_plots <- function(data, exclusion = F) {
     wooord2 <- "targeting"
   }
 
+  set.seed(24101991)
+  # Process data
   gg <- data %>%
     group_by(party) %>%
     arrange(desc(perc)) %>%
-    distinct(value, .keep_all = T) %>%
-    slice(1:10)
+    distinct(value, .keep_all = TRUE) %>%
+    group_modify(~ {
+      if (length(unique(.x$perc[1:20])) == 1) {
+        # Randomly sample if all top 10 perc are tied
+        .x %>% slice_sample(n = 20)
+      } else {
+        # Take top 10 normally
+        .x %>% slice(1:20)
+      }
+    }) %>%
+    ungroup() %>% 
+    arrange(desc(perc))
 
+  color_dat <- distinct(color_dat, party, .keep_all = TRUE) %>% drop_na()
+
+  # Create plots
   plots <- gg %>%
     mutate(spend_perlab = scales::comma(round(total_spend))) %>%
     mutate(perc = perc * 100) %>%
@@ -190,8 +205,7 @@ generate_plots <- function(data, exclusion = F) {
         hc_plotOptions(bar = list(horizontal = TRUE, stacking = "normal")) %>%
         hc_yAxis(
           title = list(text = paste0("% party budget spent on ", wooord2, " audience")),
-          max = max(data$perc*100)#,
-          # min = 0
+          max = max(data$perc * 100)
         ) %>%
         hc_xAxis(title = "", labels = list(style = list(fontSize = "10px"))) %>%
         hc_add_theme(hc_theme_google()) %>%
@@ -208,19 +222,21 @@ generate_plots <- function(data, exclusion = F) {
           align = "left",
           style = list(fontWeight = "bold")
         ) %>%
-        hc_size(height = 300) %>%
+        hc_size(height = 500) %>%
         hc_exporting(enabled = TRUE)
     })
 
   return(plots)
-
-  # columns <- ggplot2::ggarrange(plots[[1]], plots[[2]], ncol = 2)
-  # highcharter::hchart(columns, spacing = list(right = 100))
 }
 
 
 ```
 
+
+
+```{r}
+
+```
 
 
 ```{r echo=FALSE, results='asis'}

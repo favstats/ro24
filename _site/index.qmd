@@ -313,7 +313,6 @@ eval(parse(text = paste0("gt(the_table7, rowname_col = 'party_col') %>% fmt_mark
 
 :::
 
-::: {.panel-tabset}
 
 ## Google
 
